@@ -1,0 +1,96 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--color-body);
+    /* background-image: url(../IMG/panterino-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    background-attachment: fixed; */
+}
+
+:root{
+    --color-body: rgb(46, 46, 46);
+    --color-nav: rgb(0, 0, 0);
+    --color-letra: rgb(255, 255, 255);
+}
+
+.container-menu{
+    margin-top: 0;
+    background-color: var(--color-nav);
+    height: 80px;
+    position: sticky;
+    top: 0;
+    
+}
+
+.menu-items{
+    width: 500px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+    text-align: right;
+}
+
+.items{
+    padding: 0 20px 0 0;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.menu-items a:hover{
+    color: rgb(255, 123, 0);
+    font-size: 20.5px;
+}
+
+
+.title{
+    display: inline-block;
+    margin: 0px;
+    padding: 25px 0 0 20px;
+    color: white;
+}
+
+
+.container-article{
+    width: 300px;
+    height: 450px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 3px solid var(--color-letra);
+}
+
+
+.container-article img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    padding: 20px 0 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    border-bottom: 5px solid var(--color-letra);
+}
+
+.c-title{
+    text-align: center;
+    color: var(--color-letra);
+}
+
+.description{
+    width: 90%;
+    padding: 0 15px;
+    text-align: justify;
+    color: var(--color-letra);
+}
+
+footer{
+    margin-top: 1000px;
+    position: absolute;
+}

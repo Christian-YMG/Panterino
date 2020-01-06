@@ -22,6 +22,7 @@ function cambiarColor(){
         root.style.setProperty('--color-body', 'rgb(255, 255, 255)');
         body.style.transition = 'all 1s'
         img.src="IMG/Panterino.png";
+
         bandera = false;
     }
     else if(bandera === false){
@@ -32,6 +33,7 @@ function cambiarColor(){
         root.style.setProperty('--color-body', ' rgb(46, 46, 46)');
         body.style.transition = 'all 1s'
         img.src="IMG/panterino-logo.png";
+        
         bandera = true;
     }
 }

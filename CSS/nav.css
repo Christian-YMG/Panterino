@@ -94,3 +94,26 @@ footer{
     margin-top: 1000px;
     position: absolute;
 }
+
+.article{
+    margin-top: 20px;
+    color: var(--color-letra);
+}
+
+.paralax{
+    width: 100%;
+    height: 500px;
+    margin-left: 0;
+    background-image: url(../IMG/pantera.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.paralax h2{
+    padding-top: 15%;
+}

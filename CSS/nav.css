@@ -15,7 +15,7 @@ body {
 /* es la raiz del documento */
 :root {
     --color-body: rgb(255, 255, 255);
-    --color-nav: rgb(59, 131, 189);
+    --color-nav: rgba(59, 131, 189,.8);
     --color-haeder: rgba(59, 131, 189, .5);
     --color-letra: rgb(0, 0, 0);
     --footer-articles: rgb(238, 238, 238);
@@ -24,8 +24,11 @@ body {
 
 .container-menu {
     background-color: var(--color-nav);
+    backdrop-filter: saturate(100%) blur(10px);
+    box-shadow: 1px 1px 10px 1px rgb(2, 2, 2);
+    width: 100%;
     height: 60px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2px;
 
@@ -77,6 +80,7 @@ body {
 }
 
 .container-header{
+    margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     width: 98%;

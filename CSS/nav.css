@@ -16,17 +16,18 @@ body {
 :root {
     --color-body: rgb(255, 255, 255);
     --color-nav: rgb(59, 131, 189);
+    --color-haeder: rgba(59, 131, 189, .5);
     --color-letra: rgb(0, 0, 0);
     --footer-articles: rgb(238, 238, 238);
 }
 
 
 .container-menu {
-    margin-top: 0;
     background-color: var(--color-nav);
     height: 60px;
     position: sticky;
     top: 0;
+    z-index: 2px;
 
 }
 
@@ -66,7 +67,6 @@ body {
     font-size: 16px;
 }
 
-
 .title {
     display: inline-block;
     margin: 0px;
@@ -76,8 +76,26 @@ body {
     font-size: 1rem;
 }
 
+.container-header{
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    height: 200px;
+    background-color: var(--color-haeder);
+    background-blend-mode: soft-light;
+    box-shadow: 1px 1px 8px 1px rgba(2, 2, 2, .2);
+}
 
-.article-intro {
+.title-header{
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 200px;
+    font-family: fantasy;
+    font-size: 50px;
+}
+
+/* .article-intro {
     width: 80%;
     display: flex;
     margin-top: 20px;
@@ -99,7 +117,7 @@ body {
     color: var(--color-letra);
     margin-bottom: 20px;
     line-height: 1.5em;
-}
+} */
 
 .caja-articles {
     width: 90%;
@@ -113,11 +131,10 @@ body {
     width: 300px;
     height: 250px;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 0 0 10px 10px;
-    border: .4px solid black;
     box-shadow: 1px 1px 5px 0 rgb(0, 0, 0);
 }
 
@@ -160,9 +177,8 @@ body {
     width: 100%;
     height: 50px;
     display: flex;
-    position: relative;
-    top: 10px;
     background-color: var(--footer-articles);
+    margin: 10px 0 0 0;
 }
 
 .autor .img-autor{
@@ -195,7 +211,8 @@ body {
 }
 
 .text-precio:hover{
-    background-color: rgba(247, 158, 74, 0.8);
+    background-color: var(--color-nav);
+    color: var(--footer-articles);
     font-size: 18.5px;
 }
 
@@ -214,7 +231,7 @@ footer {
 
 }
 
-.paralax {
+/* .paralax {
     width: 100%;
     height: 500px;
     margin-left: 0;
@@ -226,7 +243,7 @@ footer {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-}
+} */
 
 .paralax h2 {
     padding-top: 15%;

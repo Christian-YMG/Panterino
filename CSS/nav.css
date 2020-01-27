@@ -1,7 +1,10 @@
-body {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
     height: 100vh;
     background-color: var(--color-body);
     /* background-image: url(../IMG/panterino-logo.png);
@@ -10,243 +13,90 @@ body {
     background-position: top center;
     background-attachment: fixed; */
     font-family: serif;
+    margin-top: var(--height-nav);
 }
+
+body::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+}
+
 
 /* es la raiz del documento */
 :root {
+    --height-nav: 60px;
     --color-body: rgb(255, 255, 255);
     --color-nav: rgba(59, 131, 189,.8);
     --color-header: rgba(59, 131, 189, .6);
     --color-letra: rgb(0, 0, 0);
     --footer-articles: rgb(238, 238, 238);
+    --size-menu: 1rem;
 }
 
 
-.container-menu {
-    background-color: var(--color-nav);
-    backdrop-filter: saturate(100%) blur(10px);
-    box-shadow: 1px 1px 10px 1px rgb(2, 2, 2);
-    width: 100%;
-    height: 60px;
+.container-nav{
     position: fixed;
-    top: 0;
-}
-
-.container-title {
-    width: 310px;
-    height: 60px;
-    float: left;
-    display: flex;
-}
-
-.container-title img {
-    display: block;
-    height: 40px;
-    margin-left: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.menu-items {
-    width: 340px;
-    float: right;
-    line-height: 60px;
-    margin-right: 40px;
-    text-align: right;
-}
-
-.items {
-    padding: 0 20px 0 0;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    transition: .5s;
-}
-
-.menu-items a:hover {
-    color: rgb(255, 123, 0);
-    font-size: 16px;
-}
-
-.title {
-    display: inline-block;
-    margin: 0px;
-    line-height: 60px;
-    margin-left: 20px;
-    color: white;
-    font-size: 1rem;
-}
-
-.container-header{
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 96%;
-    height: 200px;
-    background-color: var(--color-header);
-    background-blend-mode: soft-light;
-    box-shadow: 1px 1px 8px 1px rgba(2, 2, 2, .7);
-}
-
-.title-header{
-    width: 200px;
-    text-align: center;
-    margin: 0 auto;
-    line-height: 200px;
-    font-family: fantasy;
-    font-size: 50px;
-}
-
-/* .article-intro {
-    width: 80%;
-    display: flex;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-top: 2px solid var(--color-letra);
-    border-bottom: 2px solid var(--color-letra);
-}
-
-.article-intro img {
-    display: block;
-    width: 7.5em;
-    height: 7.5em;
-    margin: auto 20px;
-
-}
-
-.des-intro {
-    color: var(--color-letra);
-    margin-bottom: 20px;
-    line-height: 1.5em;
-} */
-
-.caja-articles {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container-article {
-    width: 300px;
-    height: 250px;
-    overflow: hidden;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 1px 1px 5px 0 rgb(0, 0, 0);
-}
-
-
-.container-article .img-caja {
-    display: block;
-    width: 75px;
-    height: 75px;
-    padding: 20px 0 0 0;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 3px solid var(--color-letra);
-}
-
-.description {
-    width: 90%;
-    padding: 0 15px;
-    line-height: 1.3em;
-    color: var(--color-letra);
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 20px 0 0 0;
-}
-
-.desc-desc{
-    width: 90%;
-    height: 40px;
-    padding: 0 15px;
-    line-height: 1.3em;
-    color: var(--color-letra);
-    text-align: left;
-    font-size: 1rem;
-    margin: 10px 0 0 0;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.autor{
     width: 100%;
-    height: 50px;
+    top: 0;
     display: flex;
-    background-color: var(--footer-articles);
-    margin: 10px 0 0 0;
+    height: var(--height-nav);
+    background-color: var(--color-nav);
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 5px 0 rgb(2, 2, 2);
 }
 
-.autor .img-autor{
+.title-pag{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.img-nav{
     display: block;
-    height: 40px;
-    margin-left: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 45px;
+    height: 45px;
     border-radius: 100%;
 }
 
-.text-autor{
-    width: 140px;
-    line-height: 50px;
-    text-indent: 10px;
-    font-size: 14px;
+.menu-items{
+    margin-right: 20px;
 }
 
-.text-precio{
-    width: 120px;
-    overflow: hidden;
-    line-height: 50px;  
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-nav);
-    border-left: 1px solid rgba(2, 2, 2, .2);
-    cursor: pointer;
-    transition: all .5s;
-}
-
-.text-precio:hover{
-    background-color: var(--color-nav);
-    color: var(--footer-articles);
-    font-size: 18.5px;
-}
-
-footer {
-    margin-top: 1000px;
-    position: absolute;
-}
-
-.article {
-    margin-top: 20px;
+.menu-item{
+    padding: 0 20px;
+    text-decoration: none;
     color: var(--color-letra);
-    width: 80%;
+    font-size: var(--size-menu);
+}
+
+.container-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 710px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5em;
-
+    height: 200px;
+    background-color:var(--color-header);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 5px 0 rgb(2, 2, 2);
+    margin-bottom: 20px;
 }
 
-/* .paralax {
-    width: 100%;
-    height: 500px;
-    margin-left: 0;
-    background-image: url(../IMG/pantera.jpg);
-    background-attachment: fixed;
-    text-align: center;
-    color: white;
-    font-size: 2em;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-} */
+.title-header{
+    font-size: 50px;
+    font-weight: 600;
+    font-family: fantasy;
+}
+@media screen and (max-width: 768px){
+    .title-pag{
+        margin-left: 10px;
+    }
 
-.paralax h2 {
-    padding-top: 15%;
+    .menu-item{
+        padding: 5px;
+    }
 }

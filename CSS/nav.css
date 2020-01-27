@@ -17,16 +17,31 @@ body {
 }
 
 body::-webkit-scrollbar{
-    display: block;
     width: 10px;
+    display: block;
+    background-color: rgb(223, 223, 223);
 }
+
+body::-webkit-scrollbar:hover{
+    background-color: rgb(201, 201, 201);
+    width: 11px;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(124, 124, 124);
+}
+
 
 
 /* es la raiz del documento */
 :root {
     --height-nav: 60px;
     --color-body: rgb(255, 255, 255);
-    --color-nav: rgba(59, 131, 189,.8);
+    --color-nav: rgba(59, 131, 189,.9);
     --color-header: rgba(59, 131, 189, .6);
     --color-letra: rgb(0, 0, 0);
     --footer-articles: rgb(238, 238, 238);

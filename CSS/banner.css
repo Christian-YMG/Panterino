@@ -1,0 +1,136 @@
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 30px 0 rgb(0, 0, 0);
+}
+
+.slider-contenido{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider:nth-child(1){
+    background-color: rgb(21, 129, 124);
+    color: white; 
+}
+
+.contenido-slider:nth-child(1) a{
+    background-color: white;
+    color: rgb(21, 129, 124); 
+}
+
+.contenido-slider:nth-child(2){
+    background-color: rgb(56, 91, 187);
+    color: white; 
+}
+
+.contenido-slider:nth-child(2) a{
+    background-color: white;
+    color: rgb(56, 91, 187); 
+}
+
+.contenido-slider:nth-child(3){
+    background-color: #611a68;
+    color: white;
+}
+
+.contenido-slider:nth-child(3) a{
+    background-color: white;
+    color: #611a68; 
+}
+
+.contenido-slider:nth-child(4){
+    background-color: rgb(21, 129, 124);
+    color: white; 
+}
+
+.contenido-slider:nth-child(4) a{
+    background-color: white;
+    color: rgb(21, 129, 124); 
+}
+
+
+
+.contenido-slider > img{
+    width: 400px;
+}
+
+.contenido-slider > div{
+    width: 40%;
+}
+
+.contenido-slider h2{
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contenido-slider a{
+    color: rgb(255,255,255);
+    background-color: #332863;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all .5s;
+}
+
+.contenido-slider a:hover{
+    color:white;
+    background-color: rgb(126, 126, 126);
+}
+
+.contenido-slider a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: all .5s;
+}
+
+.contenido-slider a:hover::after{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 900px){
+    .contenido-slider > img{
+        width: 250px;
+    }
+
+    .contenido-slider > div{
+        width: 40%;
+    }
+
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenido-slider{
+        flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 80%;
+    }
+
+}

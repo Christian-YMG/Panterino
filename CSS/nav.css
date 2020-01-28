@@ -6,7 +6,6 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-body);
     /* background-image: url(../IMG/panterino-logo.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -24,7 +23,6 @@ body::-webkit-scrollbar{
 
 body::-webkit-scrollbar:hover{
     background-color: rgb(201, 201, 201);
-    width: 11px;
 }
 
 body::-webkit-scrollbar-thumb{
@@ -40,8 +38,7 @@ body::-webkit-scrollbar-thumb:hover{
 /* es la raiz del documento */
 :root {
     --height-nav: 60px;
-    --color-body: rgb(255, 255, 255);
-    --color-nav: rgba(59, 131, 189,.9);
+    --color-nav: rgba(0, 75, 105, 0.9);
     --color-header: rgba(59, 131, 189, .6);
     --color-letra: rgb(0, 0, 0);
     --footer-articles: rgb(238, 238, 238);
@@ -60,12 +57,14 @@ body::-webkit-scrollbar-thumb:hover{
     justify-content: space-between;
     backdrop-filter: blur(10px);
     box-shadow: 1px 1px 5px 0 rgb(2, 2, 2);
+    z-index: 2;
 }
 
 .title-pag{
     display: flex;
     align-items: center;
     margin-left: 40px;
+    color: white;
 }
 
 .img-nav{
@@ -75,15 +74,30 @@ body::-webkit-scrollbar-thumb:hover{
     border-radius: 100%;
 }
 
+.title-nav{
+    margin-left: 20px;
+}
+
 .menu-items{
     margin-right: 20px;
 }
 
 .menu-item{
-    padding: 0 20px;
+    padding: 10px 20px;
     text-decoration: none;
     color: var(--color-letra);
     font-size: var(--size-menu);
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+    transition: all .7s;
+}
+
+.menu-item:hover{
+    color: var(--color-nav);
+    background-color: white;
+    font-weight: 600;
+    font-size: calc(var(--size-menu) + .1px);
 }
 
 .container-header{
